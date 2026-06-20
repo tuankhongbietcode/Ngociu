@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="vi">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Not Goodbye, Just Taiwan</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Inter:wght@400;500;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="texture"></div>
+  <audio id="backgroundMusic" preload="none" loop>
+    <source src="assets/music/background.mp3" type="audio/mpeg">
+  </audio>
+
+  <div class="floating-controls" aria-label="Site controls">
+    <button class="icon-btn" id="musicToggle" type="button" aria-label="Toggle music">♪</button>
+    <button class="icon-btn" id="themeToggle" type="button" aria-label="Toggle theme">☾</button>
+  </div>
+
+  <header class="hero section" id="top">
+    <div class="cloud cloud-one"></div>
+    <div class="cloud cloud-two"></div>
+    <div class="plane plane-hero" aria-hidden="true">✈</div>
+    <nav class="topbar">
+      <a href="#boarding">Boarding pass</a>
+      <a href="#story">Story</a>
+      <a href="#letters">Letters</a>
+    </nav>
+    <div class="hero-content reveal">
+      <p class="eyebrow">Not Goodbye, Just Taiwan</p>
+      <h1>For <span data-friend-name>Tiểu Ngọc</span></h1>
+      <p class="typing-line" id="typingLine">Before you go to Taiwan, we made you something.</p>
+      <button class="primary-btn" data-scroll="#boarding" type="button">Start the journey</button>
+    </div>
+    <div class="opening-letter reveal">
+      <p>Gửi <span data-friend-name>Tiểu Ngọc</span>,</p>
+      <p>Tụi mình biết lần này Ngọc đi sẽ lâu. Sẽ không còn kiểu vừa nhớ là hẹn gặp ngay, không còn những buổi rủ nhau đi ăn bất chợt, cũng không còn cảm giác chỉ cần nhắn một câu là có thể ở cạnh nhau liền.</p>
+      <p>Nhưng tụi mình không muốn ngày Ngọc đi chỉ toàn là buồn. Nên tụi mình làm nơi nhỏ này cho Ngọc: để khi nhớ nhà, nhớ những ngày ở Việt Nam, hay nhớ tụi mình, Ngọc có thể mở lại và thấy mình vẫn luôn được thương.</p>
+      <p class="handwritten">Đây không phải là lời tạm biệt. Đây chỉ là cách tụi mình nói rằng: Ngọc cứ đi thật xa, còn tụi mình vẫn ở đây, vẫn nhớ, vẫn đợi nghe Ngọc kể chuyện.</p>
+    </div>
+  </header>
+
+  <main>
+    <section class="section boarding-section" id="boarding">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Digital Boarding Pass</p>
+        <h2>Chuyến bay mang theo tụi mình trong vali ký ức</h2>
+      </div>
+      <article class="boarding-pass reveal">
+        <div class="ticket-main">
+          <div class="ticket-row">
+            <span>Passenger</span><strong data-friend-name>Tiểu Ngọc</strong>
+          </div>
+          <div class="route">
+            <div><small>From</small><b>Vietnam</b></div>
+            <div class="route-line">✈</div>
+            <div><small>To</small><b class="taiwan-easter">Taiwan</b></div>
+          </div>
+          <div class="ticket-grid">
+            <p><span>Purpose</span> Study Abroad</p>
+            <p><span>Gate</span> Friendship</p>
+            <p><span>Seat</span> Always Reserved</p>
+            <p><span>Departure</span> <b data-departure-label>Coming soon</b></p>
+            <p><span>Return</span> Whenever life brings you back</p>
+            <p><span>Status</span> Loved. Missed. Supported.</p>
+          </div>
+          <p class="baggage"><span>Baggage:</span> Dreams, Courage, Memories, Vietnamese food cravings</p>
+        </div>
+        <aside class="ticket-stub">
+          <div class="stamp">VALID<br>FOREVER</div>
+          <div class="fake-qr" aria-hidden="true"></div>
+          <button class="secondary-btn" data-open-memory="Polaroid Photos" type="button">Scan memories</button>
+        </aside>
+      </article>
+    </section>
+
+    <section class="section map-section" id="map">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Vietnam to Taiwan</p>
+        <h2>Đủ xa để nhớ nhau, chưa bao giờ đủ xa để mất nhau</h2>
+      </div>
+      <div class="map-card reveal">
+        <svg class="dream-map" viewBox="0 0 980 520" role="img" aria-label="A dreamy friendship journey from Vietnam memories to Taiwan dreams">
+          <defs>
+            <linearGradient id="dreamSea" x1="0" y1="0" x2="1" y2="1">
+              <stop offset="0%" stop-color="#A8DADC"></stop>
+              <stop offset="38%" stop-color="#F8D8B8"></stop>
+              <stop offset="68%" stop-color="#F4A7A3"></stop>
+              <stop offset="100%" stop-color="#8B7CF6"></stop>
+            </linearGradient>
+            <radialGradient id="dreamGlow" cx="50%" cy="42%" r="62%">
+              <stop offset="0%" stop-color="#FFF8EF" stop-opacity=".92"></stop>
+              <stop offset="46%" stop-color="#FFD166" stop-opacity=".32"></stop>
+              <stop offset="100%" stop-color="#0EA5A3" stop-opacity=".18"></stop>
+            </radialGradient>
+            <path id="dreamPath" d="M126 355 C245 160, 425 112, 518 252 S715 430, 856 155"></path>
+          </defs>
+          <rect width="980" height="520" rx="28" fill="url(#dreamSea)"></rect>
+          <rect width="980" height="520" rx="28" fill="url(#dreamGlow)"></rect>
+          <g class="dream-clouds">
+            <ellipse cx="152" cy="108" rx="72" ry="26"></ellipse>
+            <ellipse cx="207" cy="104" rx="48" ry="24"></ellipse>
+            <ellipse cx="760" cy="88" rx="86" ry="28"></ellipse>
+            <ellipse cx="825" cy="88" rx="52" ry="24"></ellipse>
+            <ellipse cx="492" cy="408" rx="96" ry="30"></ellipse>
+            <ellipse cx="570" cy="408" rx="54" ry="26"></ellipse>
+          </g>
+          <g class="memory-orbits">
+            <circle cx="202" cy="342" r="92"></circle>
+            <circle cx="790" cy="166" r="104"></circle>
+            <circle cx="504" cy="258" r="72"></circle>
+          </g>
+          <path d="M126 355 C245 160, 425 112, 518 252 S715 430, 856 155" class="dream-route"></path>
+          <path d="M126 355 C245 160, 425 112, 518 252 S715 430, 856 155" class="dream-route-glow"></path>
+          <g class="dream-stops">
+            <g class="dream-stop start" transform="translate(126 355)">
+              <circle r="42"></circle>
+              <text y="7">HOME</text>
+            </g>
+            <g class="dream-stop middle" transform="translate(518 252)">
+              <circle r="38"></circle>
+              <text y="7">US</text>
+            </g>
+            <g class="dream-stop end" transform="translate(856 155)">
+              <circle r="42"></circle>
+              <text y="7">DREAM</text>
+            </g>
+          </g>
+          <g class="dream-stickers">
+            <text x="180" y="250">&#10084;</text>
+            <text x="305" y="156">&#10024;</text>
+            <text x="438" y="336">&#9835;</text>
+            <text x="644" y="210">&#10084;</text>
+            <text x="742" y="344">&#10024;</text>
+            <text x="836" y="88">&#9992;</text>
+          </g>
+          <text class="dream-label label-left" x="82" y="444">Vietnam memories</text>
+          <text class="dream-label label-center" x="398" y="102">same sky, longer distance</text>
+          <text class="dream-label label-right" x="710" y="286">Taiwan dreams</text>
+          <text class="flying-plane dream-plane">
+            <textPath href="#dreamPath" startOffset="0%">
+              <animate attributeName="startOffset" values="0%;88%;0%" dur="7s" repeatCount="indefinite"></animate>
+              &#9992;
+            </textPath>
+          </text>
+        </svg>
+        <div class="fact-grid">
+          <p><b>Khoảng cách</b><span>đủ xa để nhớ nhau</span></p>
+          <p><b>Múi giờ</b><span>không đủ xa để biến mất khỏi nhau</span></p>
+          <p><b>Thời gian bay</b><span>vài tiếng</span></p>
+          <p><b>Tình bạn</b><span>không có hạn sử dụng</span></p>
+        </div>
+        <button class="primary-btn" id="missVietnamBtn" type="button">When you miss Vietnam</button>
+      </div>
+    </section>
+
+    <section class="section" id="story">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Our Story Timeline</p>
+        <h2>Mấy chương nhỏ của tụi mình</h2>
+      </div>
+      <div class="timeline" id="timeline"></div>
+    </section>
+
+    <section class="section memory-section" id="memory-box">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Digital Memory Box</p>
+        <h2>Mở ra khi cần một chút tụi mình</h2>
+      </div>
+      <div class="memory-grid" id="memoryGrid"></div>
+    </section>
+
+    <section class="section" id="letters">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Open When Letters</p>
+        <h2>Mỗi phong bì là một cái ôm để dành</h2>
+      </div>
+      <div class="envelope-grid" id="letterGrid"></div>
+    </section>
+
+    <section class="section guide-section" id="guide">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Taiwan Survival Guide</p>
+        <h2>Sổ tay sống sót phiên bản bạn thân</h2>
+      </div>
+      <div class="guide-grid" id="guideGrid"></div>
+    </section>
+
+    <section class="section messages-section" id="messages">
+      <div class="section-heading reveal">
+        <p class="eyebrow">Messages From Us</p>
+        <h2>Postcard tụi mình gửi theo Ngọc</h2>
+      </div>
+      <div class="postcard-grid" id="messageWall"></div>
+    </section>
+
+    <section class="section countdown-section" id="countdown">
+      <div class="countdown-card reveal">
+        <p class="eyebrow">Countdown</p>
+        <h2 id="countdownTitle">Đếm ngày tới chuyến bay</h2>
+        <div class="countdown" id="countdownClock">
+          <span><b>00</b><small>days</small></span>
+          <span><b>00</b><small>hours</small></span>
+          <span><b>00</b><small>mins</small></span>
+          <span><b>00</b><small>secs</small></span>
+        </div>
+        <p>Until we meet again: Counting memories, not days.</p>
+      </div>
+    </section>
+
+    <section class="section final-section" id="final">
+      <div class="stars"></div>
+      <div class="plane plane-final" aria-hidden="true">✈</div>
+      <div class="final-content reveal">
+        <p class="line">This is not goodbye.</p>
+        <p class="line">This is just see you later.</p>
+        <p class="line">Từ hôm nay, tụi mình thương nhau từ xa hơn một chút.</p>
+        <div class="final-letter">
+          <p>Đi đi, <span data-friend-name>Tiểu Ngọc</span>. Đi học, đi lớn lên, đi nhìn thế giới, đi trở thành phiên bản mà Ngọc muốn trở thành.</p>
+          <p>Khi Ngọc mệt, nhớ rằng Ngọc không cần đi hết mọi thứ một mình. Khi Ngọc vui, tụi mình muốn được nghe. Khi Ngọc buồn, tụi mình cũng muốn được biết. Khi Ngọc nhớ nhà, hãy mở lại nơi này.</p>
+          <p>Tụi mình không giữ Ngọc lại. Tụi mình chỉ gửi theo Ngọc tất cả những điều tốt đẹp nhất.</p>
+          <p>Hẹn gặp lại, ở Việt Nam, ở Đài Loan, hoặc ở bất kỳ nơi nào cuộc đời cho tụi mình gặp nhau lần nữa.</p>
+          <p class="handwritten">Not goodbye. Just see you later.</p>
+        </div>
+        <button class="primary-btn" data-scroll="#top" type="button">Replay memories</button>
+      </div>
+    </section>
+  </main>
+
+  <div class="modal" id="modal" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="modal-backdrop" data-close-modal></div>
+    <div class="modal-panel" role="document">
+      <button class="close-btn" data-close-modal type="button" aria-label="Close modal">×</button>
+      <div id="modalContent"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
