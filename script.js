@@ -1,3 +1,4 @@
+// ═══════════ SITE DATA ═══════════
 // EDIT HERE: change the friend name, dates, password, letters, messages, and placeholders below.
 const siteData = {
   friendName: "Tiểu Ngọc",
@@ -5,14 +6,14 @@ const siteData = {
   secretPassword: "banthan",
   departureDate: "2026-09-01T08:30:00+07:00",
   memories: [
-    ["The day we met", "Ngày đầu", "Tụi mình lúc đó còn lịch sự dữ lắm, nói chuyện kiểu giữ hình tượng. Ai ngờ về sau hình tượng rớt sạch, chỉ còn lại một đống kỷ niệm mà nhắc lại là cười."],
-    ["The first time we became close", "Một ngày rất thường", "Không có tiếng pháo hoa hay nhạc nền gì hết. Chỉ là tự nhiên thấy nói chuyện với Ngọc dễ, ở cạnh Ngọc nhẹ, rồi từ lúc nào Ngọc thành người tụi mình muốn kể đủ thứ trên đời."],
-    ["Our stupidest memory", "Không tiện ghi ngày", "Có những chuyện ngu tới mức không nên để Internet biết. Nhưng tụi mình nhớ. Và Ngọc cũng nhớ. Chỉ cần một đứa nhắc lại là cả nhóm tự hiểu rồi cười như chưa từng trưởng thành."],
-    ["The day we laughed too much", "Một buổi cười đau bụng", "Hôm đó chắc tụi mình chẳng làm gì vĩ đại, chỉ ngồi nói linh tinh rồi cười tới mức người ngoài nhìn vào cũng thấy khó hiểu. Nhưng đó là kiểu ngày sau này nhớ lại sẽ thấy thương."],
-    ["The time we fought but still stayed", "Sau một lần khó chịu", "Tụi mình cũng có lúc không hiểu nhau, có lúc tự ái, có lúc im lặng. Nhưng điều quan trọng là không ai bỏ đi. Tụi mình chọn ở lại, chọn nói tiếp, chọn thương nhau tử tế hơn."],
-    ["The day we knew you were leaving", "Ngày nghe tin Đài Loan", "Tụi mình vui cho Ngọc thật. Nhưng cũng có một khoảng lặng rất nhỏ trong lòng. Kiểu tự nhiên hiểu rằng từ nay muốn gặp nhau sẽ phải tính lịch, tính múi giờ, tính cả nỗi nhớ."],
-    ["Today", "Hôm nay", "Hôm nay tụi mình làm website này để Ngọc có thứ mang theo mà không nặng vali. Một món quà nhỏ, hơi sến, hơi quê, nhưng đầy lòng của tụi mình."],
-    ["The future", "Mai sau", "Mai sau tụi mình sẽ khác đi. Ngọc sẽ giỏi hơn, mạnh hơn, có thêm nhiều câu chuyện mới. Nhưng tụi mình mong trong một góc nào đó, tụi mình vẫn là tụi mình."],
+    ["The day we met", "Ngày đầu", "Tụi mình lúc đó còn lịch sự dữ lắm, nói chuyện kiểu giữ hình tượng. Ai ngờ về sau hình tượng rớt sạch, chỉ còn lại một đống kỷ niệm mà nhắc lại là cười.", "assets/photos/IMG_6620.JPG"],
+    ["The first time we became close", "Một ngày rất thường", "Không có tiếng pháo hoa hay nhạc nền gì hết. Chỉ là tự nhiên thấy nói chuyện với Ngọc dễ, ở cạnh Ngọc nhẹ, rồi từ lúc nào Ngọc thành người tụi mình muốn kể đủ thứ trên đời.", "assets/photos/IMG_6625.JPG"],
+    ["Our stupidest memory", "Không tiện ghi ngày", "Có những chuyện ngu tới mức không nên để Internet biết. Nhưng tụi mình nhớ. Và Ngọc cũng nhớ. Chỉ cần một đứa nhắc lại là cả nhóm tự hiểu rồi cười như chưa từng trưởng thành.", "assets/photos/IMG_6649.JPG"],
+    ["The day we laughed too much", "Một buổi cười đau bụng", "Hôm đó chắc tụi mình chẳng làm gì vĩ đại, chỉ ngồi nói linh tinh rồi cười tới mức người ngoài nhìn vào cũng thấy khó hiểu. Nhưng đó là kiểu ngày sau này nhớ lại sẽ thấy thương.", "assets/photos/IMG_6716.JPG"],
+    ["The time we fought but still stayed", "Sau một lần khó chịu", "Tụi mình cũng có lúc không hiểu nhau, có lúc tự ái, có lúc im lặng. Nhưng điều quan trọng là không ai bỏ đi. Tụi mình chọn ở lại, chọn nói tiếp, chọn thương nhau tử tế hơn.", "assets/photos/IMG_6738.JPG"],
+    ["The day we knew you were leaving", "Ngày nghe tin Đài Loan", "Tụi mình vui cho Ngọc thật. Nhưng cũng có một khoảng lặng rất nhỏ trong lòng. Kiểu tự nhiên hiểu rằng từ nay muốn gặp nhau sẽ phải tính lịch, tính múi giờ, tính cả nỗi nhớ.", "assets/photos/IMG_6934.JPG"],
+    ["Today", "Hôm nay", "Hôm nay tụi mình làm website này để Ngọc có thứ mang theo mà không nặng vali. Một món quà nhỏ, hơi sến, hơi quê, nhưng đầy lòng của tụi mình.", "assets/photos/IMG_6971.JPG"],
+    ["The future", "Mai sau", "Mai sau tụi mình sẽ khác đi. Ngọc sẽ giỏi hơn, mạnh hơn, có thêm nhiều câu chuyện mới. Nhưng tụi mình mong trong một góc nào đó, tụi mình vẫn là tụi mình.", "assets/photos/IMG_7001.JPG"],
   ],
   letters: [
     ["Open when you miss Vietnam", "Mở khi Ngọc nhớ Việt Nam", "Nhớ Việt Nam thì cứ nhớ cho đã. Nhớ đồ ăn, nhớ đường phố, nhớ tiếng xe, nhớ mấy buổi hẹn không cần lên kế hoạch. Ngọc không yếu đuối vì nhớ nhà đâu. Ngọc chỉ đang mang theo trong người một nơi đã thương Ngọc rất nhiều. Khi nhớ quá, nhắn tụi mình. Tụi mình có thể không ship được tô phở qua liền, nhưng có thể nghe Ngọc than rất chuyên nghiệp."],
@@ -48,17 +49,58 @@ const siteData = {
     "Mở camera call đi.",
     "Ngọc xa thôi, không mất.",
     "Nhớ Ngọc nhưng không nói nhiều đâu, ngại.",
+    "Thương Ngọc lắm 💛",
+    "Chờ Ngọc về nè.",
   ],
+  // Real photos from the user
   photos: [
-    ["assets/photos/cover.jpg", "Ảnh bìa của tụi mình"],
-    ["assets/photos/group-1.jpg", "Một ngày rất vui"],
-    ["assets/photos/group-2.jpg", "Nhìn lại là cười"],
-    ["assets/photos/memory-1.jpg", "Kỷ niệm để dành"],
-    ["assets/photos/memory-2.jpg", "Một góc nhỏ thân quen"],
-    ["assets/photos/funny-1.jpg", "Ảnh dìm placeholder"],
+    ["assets/photos/IMG_6620.JPG", "Tụi mình đi chơi 🌸"],
+    ["assets/photos/IMG_6625.JPG", "Selfie nhóm vui quá trời"],
+    ["assets/photos/IMG_6649.JPG", "Khoảnh khắc đẹp"],
+    ["assets/photos/IMG_6712.JPG", "Đi Đà Lạt nè 🌿"],
+    ["assets/photos/IMG_6716.JPG", "Cùng nhau check-in"],
+    ["assets/photos/IMG_6738.JPG", "Nhớ hoài luôn"],
+    ["assets/photos/IMG_6744.PNG", "Nấu ăn cùng nhau 🍳"],
+    ["assets/photos/IMG_6745.PNG", "Kỷ niệm đẹp"],
+    ["assets/photos/IMG_6770.JPG", "Dưới hàng đèn lồng"],
+    ["assets/photos/IMG_6777.JPG", "Chuyến đi không quên"],
+    ["assets/photos/IMG_6789.JPG", "Góc nhỏ thân quen"],
+    ["assets/photos/IMG_6810.JPG", "Cùng nhau đi xa"],
+    ["assets/photos/IMG_6827.JPG", "Một ngày rất vui"],
+    ["assets/photos/IMG_6831.JPG", "Nhìn lại là cười"],
+    ["assets/photos/IMG_6846.JPG", "Kỷ niệm để dành 💕"],
+    ["assets/photos/IMG_6859.JPG", "Mãi mãi bạn thân"],
+    ["assets/photos/IMG_6868.JPG", "Lúc nào cũng vui"],
+    ["assets/photos/IMG_6879.JPG", "Đi cùng nhau hoài"],
+    ["assets/photos/IMG_6934.JPG", "Đèn lồng đỏ 🏮"],
+    ["assets/photos/IMG_6938.JPG", "Nhớ cảnh này quá"],
+    ["assets/photos/IMG_6954.JPG", "Đẹp quá trời ơi"],
+    ["assets/photos/IMG_6971.JPG", "Nụ cười thân quen"],
+    ["assets/photos/IMG_6980.JPG", "Tụi mình đông vui ghê"],
+    ["assets/photos/IMG_6994.JPG", "Ảnh nhóm xịn nhất"],
+    ["assets/photos/IMG_7001.JPG", "Cùng nhau tới cuối"],
+    ["assets/photos/IMG_7105.JPG", "Khoảnh khắc quý giá"],
+    ["assets/photos/IMG_4489.PNG", "Screenshot kỷ niệm 📱"],
+    ["assets/photos/IMG_5118.PNG", "Đi xe máy ban đêm 🏍️"],
+    ["assets/photos/IMG_8085.jpg", "Ảnh nhỏ mà thương"],
+  ],
+  // Real videos
+  videos: [
+    ["assets/photos/shared_video_070C1F49-5CA7-47AB-ACC1-35721E2A4C2E.MP4", "Video kỷ niệm #1 🎬"],
+    ["assets/photos/shared_video_0B789D4E-7836-42BF-BB8D-B560C1861566.MP4", "Video kỷ niệm #2 📹"],
+    ["assets/photos/shared_video_0E71A7A2-3C30-4FF5-AB0D-ED87769530ED.MP4", "Video kỷ niệm #3"],
+    ["assets/photos/shared_video_4496780D-222F-4384-B9FB-E571CB4642B0.MP4", "Video kỷ niệm #4"],
+    ["assets/photos/shared_video_6C1A24D1-6AE5-42AF-A3DE-75FB99163180.MP4", "Video kỷ niệm #5"],
+    ["assets/photos/shared_video_7ED9CC9E-CB38-4FC9-9936-32FAA097FC22.MP4", "Video kỷ niệm #6"],
+    ["assets/photos/shared_video_9449D5AB-D104-4267-9027-914ACFD585F9.MP4", "Video kỷ niệm #7"],
+    ["assets/photos/shared_video_A6D1107C-3141-43BE-A404-F54FD485DCC4.MP4", "Video kỷ niệm #8"],
+    ["assets/photos/shared_video_C6B490FB-EEDC-4825-BD31-3E167815E355.MP4", "Video kỷ niệm #9"],
+    ["assets/photos/shared_video_CA2FF4A2-EDF3-4885-9C52-2C2DB347B86C.MP4", "Video kỷ niệm #10"],
+    ["assets/photos/shared_video_CB51BAFC-C257-4FB5-A0BE-6092EB390AF8.MP4", "Video kỷ niệm #11 💛"],
   ],
 };
 
+// ═══════════ UTILITIES ═══════════
 const $ = (selector) => document.querySelector(selector);
 const $$ = (selector) => [...document.querySelectorAll(selector)];
 const modal = $("#modal");
@@ -66,13 +108,125 @@ const modalContent = $("#modalContent");
 let synthAudio = null;
 let synthTimer = null;
 let loveTimer = null;
+let petalTimer = null;
+let heartTimer = null;
+let shootingStarTimer = null;
+let lanternTimer = null;
+let lightboxIndex = 0;
 
+// ═══════════ SPLASH SCREEN ═══════════
+function setupSplash() {
+  const splash = $("#splash");
+  const btn = $("#splashBtn");
+  const petalsContainer = $("#splashPetals");
+
+  // Create splash petals
+  const petalColors = ["#ffb4a2", "#ff6b9d", "#e0aaff", "#F4A7A3", "#ffd166", "#fff"];
+  for (let i = 0; i < 40; i++) {
+    const petal = document.createElement("div");
+    petal.className = "splash-petal";
+    petal.style.left = `${Math.random() * 100}%`;
+    petal.style.width = `${10 + Math.random() * 18}px`;
+    petal.style.height = `${10 + Math.random() * 18}px`;
+    petal.style.background = petalColors[Math.floor(Math.random() * petalColors.length)];
+    petal.style.animationDuration = `${4 + Math.random() * 6}s`;
+    petal.style.animationDelay = `${Math.random() * 5}s`;
+    petalsContainer.appendChild(petal);
+  }
+
+  btn.addEventListener("click", () => {
+    splash.classList.add("hidden");
+    setTimeout(() => {
+      splash.style.display = "none";
+      document.body.style.overflow = "";
+      startBackgroundEffects();
+    }, 800);
+  });
+
+  document.body.style.overflow = "hidden";
+}
+
+// ═══════════ BACKGROUND EFFECTS ═══════════
+function startBackgroundEffects() {
+  startFallingPetals();
+  startFloatingHearts();
+  startShootingStars($("#shootingStars"));
+  startShootingStars($("#shootingStarsFinal"));
+  startLanterns();
+}
+
+function startFallingPetals() {
+  const container = $("#fallingPetals");
+  const colors = ["#ffb4a2", "#ff6b9d", "#e0aaff", "#F4A7A3", "#ffd166"];
+
+  petalTimer = setInterval(() => {
+    const petal = document.createElement("div");
+    petal.className = "petal";
+    petal.style.left = `${Math.random() * 100}%`;
+    petal.style.width = `${8 + Math.random() * 14}px`;
+    petal.style.height = `${8 + Math.random() * 14}px`;
+    petal.style.background = colors[Math.floor(Math.random() * colors.length)];
+    petal.style.animationDuration = `${6 + Math.random() * 8}s`;
+    container.appendChild(petal);
+    petal.addEventListener("animationend", () => petal.remove(), { once: true });
+  }, 1200);
+}
+
+function startFloatingHearts() {
+  const container = $("#floatingHearts");
+  const hearts = ["♡", "♥", "❤", "💕", "💗", "💛"];
+
+  heartTimer = setInterval(() => {
+    const heart = document.createElement("span");
+    heart.className = "heart-float";
+    heart.textContent = hearts[Math.floor(Math.random() * hearts.length)];
+    heart.style.left = `${Math.random() * 100}%`;
+    heart.style.fontSize = `${14 + Math.random() * 18}px`;
+    heart.style.animationDuration = `${5 + Math.random() * 6}s`;
+    heart.style.color = ["#C1121F", "#ff6b9d", "#F4A7A3", "#e0aaff", "#ffd166"][Math.floor(Math.random() * 5)];
+    container.appendChild(heart);
+    heart.addEventListener("animationend", () => heart.remove(), { once: true });
+  }, 2000);
+}
+
+function startShootingStars(container) {
+  if (!container) return;
+  setInterval(() => {
+    const star = document.createElement("div");
+    star.className = "shooting-star";
+    star.style.left = `${30 + Math.random() * 70}%`;
+    star.style.top = `${Math.random() * 50}%`;
+    star.style.animationDuration = `${.5 + Math.random() * .5}s`;
+    container.appendChild(star);
+    star.addEventListener("animationend", () => star.remove(), { once: true });
+  }, 3000 + Math.random() * 4000);
+}
+
+function startLanterns() {
+  const container = $("#lanterns");
+  if (!container) return;
+  const colors = ["#ff4444", "#ff6b35", "#ffd166", "#ff8888", "#cc3333"];
+
+  lanternTimer = setInterval(() => {
+    const lantern = document.createElement("div");
+    lantern.className = "lantern";
+    lantern.style.left = `${Math.random() * 100}%`;
+    lantern.style.background = colors[Math.floor(Math.random() * colors.length)];
+    lantern.style.animationDuration = `${8 + Math.random() * 6}s`;
+    lantern.style.opacity = `.6`;
+    container.appendChild(lantern);
+    lantern.addEventListener("animationend", () => lantern.remove(), { once: true });
+  }, 3000);
+}
+
+// ═══════════ TEXT SETUP ═══════════
 function setText() {
   $$("[data-friend-name]").forEach((el) => (el.textContent = siteData.friendName));
   const date = new Date(siteData.departureDate);
   $("[data-departure-label]").textContent = date.toLocaleString("vi-VN", { dateStyle: "medium", timeStyle: "short" });
 }
 
+// ═══════════ MODAL ═══════════
 function openModal(html) {
   modalContent.innerHTML = html;
   modal.classList.add("is-open");
@@ -86,11 +240,60 @@ function closeModal() {
   document.body.style.overflow = "";
 }
 
+// ═══════════ LIGHTBOX ═══════════
+function openLightbox(index) {
+  lightboxIndex = index;
+  const lb = $("#lightbox");
+  const img = $("#lightboxImg");
+  const caption = $("#lightboxCaption");
+
+  img.src = siteData.photos[index][0];
+  caption.textContent = siteData.photos[index][1];
+  lb.setAttribute("aria-hidden", "false");
+  document.body.style.overflow = "hidden";
+}
+
+function closeLightbox() {
+  const lb = $("#lightbox");
+  lb.setAttribute("aria-hidden", "true");
+  document.body.style.overflow = "";
+}
+
+function prevLightbox() {
+  lightboxIndex = (lightboxIndex - 1 + siteData.photos.length) % siteData.photos.length;
+  $("#lightboxImg").src = siteData.photos[lightboxIndex][0];
+  $("#lightboxCaption").textContent = siteData.photos[lightboxIndex][1];
+}
+
+function nextLightbox() {
+  lightboxIndex = (lightboxIndex + 1) % siteData.photos.length;
+  $("#lightboxImg").src = siteData.photos[lightboxIndex][0];
+  $("#lightboxCaption").textContent = siteData.photos[lightboxIndex][1];
+}
+
+function setupLightbox() {
+  $("#lightboxClose").addEventListener("click", closeLightbox);
+  $("#lightboxPrev").addEventListener("click", prevLightbox);
+  $("#lightboxNext").addEventListener("click", nextLightbox);
+
+  document.addEventListener("keydown", (e) => {
+    if ($("#lightbox").getAttribute("aria-hidden") === "false") {
+      if (e.key === "Escape") closeLightbox();
+      if (e.key === "ArrowLeft") prevLightbox();
+      if (e.key === "ArrowRight") nextLightbox();
+    }
+  });
+}
+
+// ═══════════ RENDER TIMELINE ═══════════
 function renderTimeline() {
   $("#timeline").innerHTML = siteData.memories.map((item, index) => `
     <article class="timeline-item reveal">
       <div class="polaroid" style="--tilt:${index % 2 ? 2 : -2}deg">
-        <div class="placeholder-photo">photo ${index + 1}</div>
+        ${item[3]
+          ? `<img src="${item[3]}" alt="${item[0]}" loading="lazy">`
+          : `<div class="placeholder-photo">photo ${index + 1}</div>`
+        }
       </div>
       <div>
         <p class="eyebrow">${item[1]}</p>
@@ -101,30 +304,62 @@ function renderTimeline() {
   `).join("");
 }
 
+// ═══════════ RENDER PHOTO GALLERY ═══════════
+function renderPhotoGallery() {
+  const container = $("#photoGallery");
+  container.innerHTML = siteData.photos.map(([src, caption], index) => `
+    <div class="gallery-item reveal" data-lightbox="${index}">
+      <img src="${src}" alt="${caption}" loading="lazy">
+      <div class="gallery-overlay">
+        <p>${caption}</p>
+      </div>
+    </div>
+  `).join("");
+}
+
+// ═══════════ RENDER VIDEO GALLERY ═══════════
+function renderVideoGallery() {
+  const container = $("#videoGallery");
+  container.innerHTML = siteData.videos.map(([src, caption]) => `
+    <div class="video-card reveal">
+      <video controls preload="metadata" playsinline>
+        <source src="${src}" type="video/mp4">
+        Trình duyệt không hỗ trợ video.
+      </video>
+      <div class="video-card-info">
+        <p>${caption}</p>
+      </div>
+    </div>
+  `).join("");
+}
+
+// ═══════════ MEMORY HTML ═══════════
 function memoryHtml(title) {
   const gallery = siteData.photos.map(([src, caption], index) => `
-    <figure class="polaroid">
-      <div class="placeholder-photo" data-src="${src}">photo ${index + 1}</div>
-      <figcaption>${caption}</figcaption>
+    <figure class="polaroid" style="margin:0">
+      <img src="${src}" alt="${caption}" loading="lazy" style="width:100%;height:160px;object-fit:cover;border-radius:4px;cursor:pointer" data-gallery-lightbox="${index}">
+      <figcaption style="font-size:.8rem;padding:4px 0;color:var(--muted)">${caption}</figcaption>
     </figure>
   `).join("");
+
   const templates = {
-    "Polaroid Photos": `<h2>Polaroid Photos</h2><div class="modal-gallery">${gallery}</div>`,
-    "Dumb Screenshots": `<h2>Dumb Screenshots</h2><p>Khu này để Ngọc thả meme, ảnh chụp màn hình, tin nhắn vô tri và những thứ không nên công khai nhưng rất nên giữ.</p><div class="placeholder-photo">funny screenshot placeholder</div>`,
-    "Voice Notes": `<h2>Voice Notes</h2><p>Đặt file vào <b>assets/voices</b> rồi sửa đường dẫn trong HTML này nếu muốn.</p><audio controls preload="none"><source src="assets/voices/voice-1.mp3" type="audio/mpeg"></audio>`,
-    "Inside Jokes": `<h2>Inside Jokes</h2><ul><li>Câu nói chỉ tụi mình hiểu số 1.</li><li>Meme nội bộ không giải thích được.</li><li>Cái biệt danh mà Ngọc cấm nhưng tụi mình vẫn nhớ.</li></ul>`,
-    "Things We Will Miss": `<h2>Things We Will Miss</h2><p>Tụi mình sẽ nhớ cách Ngọc xuất hiện trong những ngày rất bình thường, nhớ tiếng cười, nhớ mấy câu than thở, nhớ cả việc có một người để rủ đi ăn mà không cần giải thích quá nhiều.</p>`,
-    "Tiny Promises": `<h2>Tiny Promises</h2><ul><li>Tụi mình sẽ nhắn Ngọc khi thấy món gì làm tụi mình nhớ Ngọc.</li><li>Ngọc vui hay buồn cũng được kể.</li><li>Gặp lại sẽ đi ăn một bữa thật dài.</li></ul>`,
-    "Secret Letter": `<h2>Secret Letter</h2><p>Nhập password/nickname để mở thư bí mật.</p><form class="secret-form" id="secretForm"><input id="secretInput" placeholder="Password"><button class="primary-btn" type="submit">Open</button></form><p id="secretResult"></p>`,
-    "Emergency Hug Button": `<h2>Emergency Hug Button</h2><p id="hugText">${randomHug()}</p><button class="primary-btn" id="newHugBtn" type="button">Gửi thêm một cái ôm</button>`,
-    "Do not click": `<h2>Đã bảo đừng click rồi mà</h2><p>Đây là chỗ dành cho ảnh dìm huyền thoại. Tạm thời là placeholder để Ngọc tự thay bằng file <b>assets/photos/funny-1.jpg</b>.</p><div class="placeholder-photo">ảnh dìm cực mạnh</div>`,
+    "Polaroid Photos": `<h2>📸 Polaroid Photos</h2><div class="modal-gallery">${gallery}</div>`,
+    "Dumb Screenshots": `<h2>😂 Dumb Screenshots</h2><p>Khu này để Ngọc thả meme, ảnh chụp màn hình, tin nhắn vô tri và những thứ không nên công khai nhưng rất nên giữ.</p><div class="modal-gallery">${siteData.photos.slice(0, 6).map(([src, caption]) => `<figure style="margin:0"><img src="${src}" alt="${caption}" loading="lazy" style="width:100%;height:160px;object-fit:cover;border-radius:6px"><figcaption style="font-size:.8rem;color:var(--muted)">${caption}</figcaption></figure>`).join("")}</div>`,
+    "Voice Notes": `<h2>🎤 Voice Notes</h2><p>Đặt file vào <b>assets/voices</b> rồi sửa đường dẫn trong HTML này nếu muốn.</p><audio controls preload="none"><source src="assets/voices/voice-1.mp3" type="audio/mpeg"></audio>`,
+    "Inside Jokes": `<h2>😜 Inside Jokes</h2><ul><li>Câu nói chỉ tụi mình hiểu số 1.</li><li>Meme nội bộ không giải thích được.</li><li>Cái biệt danh mà Ngọc cấm nhưng tụi mình vẫn nhớ.</li></ul>`,
+    "Things We Will Miss": `<h2>💔 Things We Will Miss</h2><p>Tụi mình sẽ nhớ cách Ngọc xuất hiện trong những ngày rất bình thường, nhớ tiếng cười, nhớ mấy câu than thở, nhớ cả việc có một người để rủ đi ăn mà không cần giải thích quá nhiều.</p>`,
+    "Tiny Promises": `<h2>🤞 Tiny Promises</h2><ul><li>Tụi mình sẽ nhắn Ngọc khi thấy món gì làm tụi mình nhớ Ngọc.</li><li>Ngọc vui hay buồn cũng được kể.</li><li>Gặp lại sẽ đi ăn một bữa thật dài.</li></ul>`,
+    "Secret Letter": `<h2>🔐 Secret Letter</h2><p>Nhập password/nickname để mở thư bí mật.</p><form class="secret-form" id="secretForm"><input id="secretInput" placeholder="Password"><button class="primary-btn" type="submit">Open</button></form><p id="secretResult"></p>`,
+    "Emergency Hug Button": `<h2>🤗 Emergency Hug Button</h2><p id="hugText" style="font-size:1.5rem;font-family:Caveat,cursive;color:var(--red)">${randomHug()}</p><button class="primary-btn" id="newHugBtn" type="button">💛 Gửi thêm một cái ôm</button>`,
+    "Do not click": `<h2>⚠️ Đã bảo đừng click rồi mà</h2><p>Đây là chỗ dành cho ảnh dìm huyền thoại.</p><div class="modal-gallery">${siteData.photos.slice(-6).map(([src, caption]) => `<figure style="margin:0"><img src="${src}" alt="${caption}" loading="lazy" style="width:100%;height:160px;object-fit:cover;border-radius:6px"><figcaption style="font-size:.8rem;color:var(--muted)">${caption}</figcaption></figure>`).join("")}</div>`,
   };
   return templates[title] || `<h2>${title}</h2><p>Đang chờ thêm kỷ niệm.</p>`;
 }
 
+// ═══════════ RENDER MEMORY BOX ═══════════
 function renderMemoryBox() {
   const items = ["Polaroid Photos", "Dumb Screenshots", "Voice Notes", "Inside Jokes", "Things We Will Miss", "Tiny Promises", "Secret Letter", "Emergency Hug Button", "Do not click"];
-  const icons = ["▣", "☻", "♫", "※", "♡", "✓", "✉", "＋", "!"];
+  const icons = ["📸", "😂", "🎤", "😜", "💔", "🤞", "🔐", "🤗", "⚠️"];
   $("#memoryGrid").innerHTML = items.map((title, index) => `
     <button class="memory-card reveal" type="button" data-open-memory="${title}">
       <span class="icon">${icons[index]}</span>
@@ -134,6 +369,7 @@ function renderMemoryBox() {
   `).join("");
 }
 
+// ═══════════ RENDER LETTERS ═══════════
 function renderLetters() {
   $("#letterGrid").innerHTML = siteData.letters.map(([title, viTitle, body]) => `
     <button class="envelope reveal" type="button" data-letter="${title}">
@@ -143,12 +379,14 @@ function renderLetters() {
   `).join("");
 }
 
+// ═══════════ RENDER GUIDE ═══════════
 function renderGuide() {
   $("#guideGrid").innerHTML = siteData.survivalGuide.map(([title, body]) => `
     <article class="guide-card reveal"><h3>${title}</h3><p>${body}</p></article>
   `).join("");
 }
 
+// ═══════════ RENDER MESSAGES ═══════════
 function renderMessages() {
   $("#messageWall").innerHTML = siteData.messages.map((message, index) => `
     <article class="postcard reveal">
@@ -159,10 +397,12 @@ function renderMessages() {
   `).join("");
 }
 
+// ═══════════ RANDOM HUG ═══════════
 function randomHug() {
   return siteData.hugMessages[Math.floor(Math.random() * siteData.hugMessages.length)];
 }
 
+// ═══════════ INTERACTIONS ═══════════
 function setupInteractions() {
   document.addEventListener("click", (event) => {
     const scrollTarget = event.target.closest("[data-scroll]");
@@ -177,11 +417,26 @@ function setupInteractions() {
           e.preventDefault();
           const ok = $("#secretInput").value.trim().toLowerCase() === siteData.secretPassword.toLowerCase();
           $("#secretResult").innerHTML = ok
-            ? `<span class="handwritten">Tụi mình thương Ngọc nhiều hơn tụi mình nói ra. Đi xa nhớ giữ mình, nhớ gọi về, nhớ rằng Ngọc luôn có một chỗ rất riêng trong lòng tụi mình.</span>`
+            ? `<span class="handwritten">Tụi mình thương Ngọc nhiều hơn tụi mình nói ra. Đi xa nhớ giữ mình, nhớ gọi về, nhớ rằng Ngọc luôn có một chỗ rất riêng trong lòng tụi mình. 💛</span>`
             : "Sai rồi, thử nickname/password khác nha.";
         });
       }
-      $("#newHugBtn")?.addEventListener("click", () => ($("#hugText").textContent = randomHug()));
+      $("#newHugBtn")?.addEventListener("click", () => {
+        const hugEl = $("#hugText");
+        hugEl.style.opacity = "0";
+        setTimeout(() => {
+          hugEl.textContent = randomHug();
+          hugEl.style.opacity = "1";
+        }, 200);
+      });
+
+      // Setup gallery lightbox clicks inside modal
+      modalContent.querySelectorAll("[data-gallery-lightbox]").forEach(img => {
+        img.addEventListener("click", () => {
+          closeModal();
+          openLightbox(parseInt(img.dataset.galleryLightbox));
+        });
+      });
     }
 
     const letter = event.target.closest("[data-letter]");
@@ -190,17 +445,27 @@ function setupInteractions() {
       if (found) openModal(`<p class="eyebrow">${found[0]}</p><h2>${found[1]}</h2><p>${found[2]}</p>`);
     }
 
+    // Lightbox from gallery
+    const galleryItem = event.target.closest("[data-lightbox]");
+    if (galleryItem) {
+      openLightbox(parseInt(galleryItem.dataset.lightbox));
+    }
+
     if (event.target.matches("[data-close-modal]")) closeModal();
   });
 
   $("#missVietnamBtn").addEventListener("click", () => openModal(`
-    <h2>Khi nhớ Việt Nam</h2>
+    <h2>🇻🇳 Khi nhớ Việt Nam</h2>
     <p>Khi nhớ Việt Nam, nhớ đồ ăn, nhớ đường phố, nhớ tụi mình, thì mở lại trang này. Ngọc không cần phải mạnh mẽ mọi lúc. Có những ngày nhớ nhà là chuyện bình thường. Chỉ cần nhớ rằng ở đây vẫn có người đợi tin nhắn của Ngọc.</p>
+    <div class="modal-gallery" style="margin-top:18px">
+      ${siteData.photos.slice(0, 9).map(([src, caption]) => `<figure style="margin:0"><img src="${src}" alt="${caption}" loading="lazy" style="width:100%;height:140px;object-fit:cover;border-radius:6px"></figure>`).join("")}
+    </div>
   `));
 
   document.addEventListener("keydown", (event) => { if (event.key === "Escape") closeModal(); });
 }
 
+// ═══════════ TOGGLES ═══════════
 function setupToggles() {
   $("#themeToggle").addEventListener("click", () => {
     document.body.classList.toggle("dark");
@@ -248,6 +513,7 @@ function startMusicUi() {
   startFloatingLove();
 }
 
+// ═══════════ SYNTH MUSIC ═══════════
 function startSynthMusic() {
   if (synthAudio) {
     synthAudio.resume?.();
@@ -273,6 +539,7 @@ function startSynthMusic() {
   feedback.connect(delay);
   delay.connect(master);
 
+  // Beautiful emotional melody
   const notes = [
     392, 493.88, 587.33, 659.25,
     587.33, 493.88, 440, 392,
@@ -339,7 +606,7 @@ function stopSynthMusic() {
 
 function startFloatingLove() {
   if (loveTimer) return;
-  const symbols = ["♡", "♪", "✦", "love", "miss", "soon"];
+  const symbols = ["♡", "♪", "✦", "love", "miss", "soon", "💛", "🌸"];
   loveTimer = setInterval(() => {
     const item = document.createElement("span");
     item.className = "floating-love";
@@ -348,7 +615,7 @@ function startFloatingLove() {
     item.style.setProperty("--love-drift", `${Math.random() * 120 - 60}px`);
     item.style.setProperty("--love-size", `${18 + Math.random() * 18}px`);
     item.style.setProperty("--love-speed", `${5 + Math.random() * 4}s`);
-    item.style.setProperty("--love-color", ["#C1121F", "#FFD166", "#0EA5A3", "#8B7CF6", "#F4A7A3"][Math.floor(Math.random() * 5)]);
+    item.style.setProperty("--love-color", ["#C1121F", "#FFD166", "#0EA5A3", "#8B7CF6", "#F4A7A3", "#ff6b9d"][Math.floor(Math.random() * 6)]);
     document.body.appendChild(item);
     item.addEventListener("animationend", () => item.remove(), { once: true });
   }, 520);
@@ -359,6 +626,7 @@ function stopFloatingLove() {
   loveTimer = null;
 }
 
+// ═══════════ COUNTDOWN ═══════════
 function setupCountdown() {
   const clock = $("#countdownClock");
   const title = $("#countdownTitle");
@@ -382,6 +650,7 @@ function setupCountdown() {
   setInterval(tick, 1000);
 }
 
+// ═══════════ REVEAL ON SCROLL ═══════════
 function setupReveal() {
   const observer = new IntersectionObserver((entries) => {
     entries.forEach((entry) => {
@@ -391,19 +660,21 @@ function setupReveal() {
   $$(".reveal").forEach((el) => observer.observe(el));
 }
 
+// ═══════════ EASTER EGG ═══════════
 function setupEasterEgg() {
   let taiwanClicks = 0;
   $$(".taiwan-easter").forEach((el) => {
     el.addEventListener("click", () => {
       taiwanClicks += 1;
       if (taiwanClicks === 7) {
-        openModal("<h2>Bí mật</h2><p>Ngọc tìm được bí mật rồi. Điều bí mật là: tụi mình nhớ Ngọc hơn tụi mình nói ra.</p>");
+        openModal("<h2>🎉 Bí mật</h2><p>Ngọc tìm được bí mật rồi. Điều bí mật là: tụi mình nhớ Ngọc hơn tụi mình nói ra. 💛</p>");
         taiwanClicks = 0;
       }
     });
   });
 }
 
+// ═══════════ TYPING INTRO ═══════════
 function typeIntro() {
   const el = $("#typingLine");
   const text = "Before you go to Taiwan, we made you something.";
@@ -416,11 +687,8 @@ function typeIntro() {
   }, 42);
 }
 
+// ═══════════ PREMIUM EFFECTS ═══════════
 function setupPremiumEffects() {
-  const progress = document.createElement("div");
-  progress.className = "progress-bar";
-  document.body.prepend(progress);
-
   const setProgress = () => {
     const max = document.documentElement.scrollHeight - window.innerHeight;
     const percent = max > 0 ? (window.scrollY / max) * 100 : 0;
@@ -457,10 +725,10 @@ function setupPremiumEffects() {
 }
 
 function burst(x, y) {
-  const colors = ["#FFD166", "#C1121F", "#0EA5A3", "#F4A7A3", "#8B7CF6"];
-  for (let i = 0; i < 10; i += 1) {
+  const colors = ["#FFD166", "#C1121F", "#0EA5A3", "#F4A7A3", "#8B7CF6", "#ff6b9d"];
+  for (let i = 0; i < 12; i += 1) {
     const spark = document.createElement("span");
-    const angle = (Math.PI * 2 * i) / 10;
+    const angle = (Math.PI * 2 * i) / 12;
     const distance = 38 + Math.random() * 28;
     spark.className = "spark";
     spark.style.left = `${x}px`;
@@ -473,14 +741,19 @@ function burst(x, y) {
   }
 }
 
+// ═══════════ INIT ═══════════
 function init() {
+  setupSplash();
   setText();
   renderTimeline();
+  renderPhotoGallery();
+  renderVideoGallery();
   renderMemoryBox();
   renderLetters();
   renderGuide();
   renderMessages();
   setupInteractions();
+  setupLightbox();
   setupToggles();
   setupCountdown();
   setupEasterEgg();

@@ -3,37 +3,74 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Not Goodbye, Just Taiwan</title>
+  <title>Not Goodbye, Just Taiwan — Gửi Tiểu Ngọc</title>
+  <meta name="description" content="Một trang web nhỏ, hơi sến, đầy lòng thương — dành cho Tiểu Ngọc trước ngày đi Đài Loan.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Inter:wght@400;500;700;800&family=Playfair+Display:wght@600;700;800&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Caveat:wght@500;700&family=Inter:wght@400;500;700;800&family=Playfair+Display:ital,wght@0,600;0,700;0,800;1,600;1,700&family=Dancing+Script:wght@500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
+
+  <!-- ═══════════ SPLASH SCREEN ═══════════ -->
+  <div class="splash" id="splash">
+    <div class="splash-petals" id="splashPetals"></div>
+    <div class="splash-content">
+      <div class="splash-envelope">
+        <div class="splash-flap"></div>
+        <div class="splash-letter-pull">
+          <p class="splash-handwritten">Gửi Tiểu Ngọc,</p>
+          <p class="splash-sub">Trước ngày Ngọc đi Đài Loan, tụi mình có một món quà nhỏ...</p>
+        </div>
+      </div>
+      <button class="splash-btn" id="splashBtn" type="button">
+        <span class="splash-btn-icon">💌</span>
+        Mở thư ra nha
+      </button>
+    </div>
+  </div>
+
+  <!-- ═══════════ BACKGROUND EFFECTS ═══════════ -->
   <div class="texture"></div>
+  <div class="falling-petals" id="fallingPetals" aria-hidden="true"></div>
+  <div class="floating-hearts" id="floatingHearts" aria-hidden="true"></div>
+
+  <!-- ═══════════ AUDIO (hidden) ═══════════ -->
   <audio id="backgroundMusic" preload="none" loop>
     <source src="assets/music/background.mp3" type="audio/mpeg">
   </audio>
 
+  <!-- ═══════════ FLOATING CONTROLS ═══════════ -->
   <div class="floating-controls" aria-label="Site controls">
     <button class="icon-btn" id="musicToggle" type="button" aria-label="Toggle music">♪</button>
     <button class="icon-btn" id="themeToggle" type="button" aria-label="Toggle theme">☾</button>
   </div>
 
+  <!-- ═══════════ SCROLL PROGRESS BAR ═══════════ -->
+  <div class="progress-bar"></div>
+
+  <!-- ═══════════ HERO ═══════════ -->
   <header class="hero section" id="top">
+    <div class="hero-stars" id="heroStars"></div>
     <div class="cloud cloud-one"></div>
     <div class="cloud cloud-two"></div>
+    <div class="cloud cloud-three"></div>
+    <div class="shooting-stars" id="shootingStars"></div>
     <div class="plane plane-hero" aria-hidden="true">✈</div>
     <nav class="topbar">
-      <a href="#boarding">Boarding pass</a>
+      <a href="#boarding">Boarding Pass</a>
       <a href="#story">Story</a>
+      <a href="#gallery">Gallery</a>
       <a href="#letters">Letters</a>
+      <a href="#final">Goodbye</a>
     </nav>
     <div class="hero-content reveal">
       <p class="eyebrow">Not Goodbye, Just Taiwan</p>
       <h1>For <span data-friend-name>Tiểu Ngọc</span></h1>
       <p class="typing-line" id="typingLine">Before you go to Taiwan, we made you something.</p>
-      <button class="primary-btn" data-scroll="#boarding" type="button">Start the journey</button>
+      <button class="primary-btn glow-btn" data-scroll="#boarding" type="button">
+        ✈ Bắt đầu hành trình
+      </button>
     </div>
     <div class="opening-letter reveal">
       <p>Gửi <span data-friend-name>Tiểu Ngọc</span>,</p>
@@ -41,12 +78,19 @@
       <p>Nhưng tụi mình không muốn ngày Ngọc đi chỉ toàn là buồn. Nên tụi mình làm nơi nhỏ này cho Ngọc: để khi nhớ nhà, nhớ những ngày ở Việt Nam, hay nhớ tụi mình, Ngọc có thể mở lại và thấy mình vẫn luôn được thương.</p>
       <p class="handwritten">Đây không phải là lời tạm biệt. Đây chỉ là cách tụi mình nói rằng: Ngọc cứ đi thật xa, còn tụi mình vẫn ở đây, vẫn nhớ, vẫn đợi nghe Ngọc kể chuyện.</p>
     </div>
+    <!-- Wave divider -->
+    <div class="wave-divider">
+      <svg viewBox="0 0 1440 120" preserveAspectRatio="none">
+        <path d="M0,64 C360,120 720,0 1080,64 C1260,96 1380,80 1440,64 L1440,120 L0,120Z" fill="var(--cream)"/>
+      </svg>
+    </div>
   </header>
 
   <main>
+    <!-- ═══════════ BOARDING PASS ═══════════ -->
     <section class="section boarding-section" id="boarding">
       <div class="section-heading reveal">
-        <p class="eyebrow">Digital Boarding Pass</p>
+        <p class="eyebrow">✈ Digital Boarding Pass</p>
         <h2>Chuyến bay mang theo tụi mình trong vali ký ức</h2>
       </div>
       <article class="boarding-pass reveal">
@@ -72,14 +116,15 @@
         <aside class="ticket-stub">
           <div class="stamp">VALID<br>FOREVER</div>
           <div class="fake-qr" aria-hidden="true"></div>
-          <button class="secondary-btn" data-open-memory="Polaroid Photos" type="button">Scan memories</button>
+          <button class="secondary-btn" data-open-memory="Polaroid Photos" type="button">📸 Scan memories</button>
         </aside>
       </article>
     </section>
 
+    <!-- ═══════════ MAP/ROUTE ═══════════ -->
     <section class="section map-section" id="map">
       <div class="section-heading reveal">
-        <p class="eyebrow">Vietnam to Taiwan</p>
+        <p class="eyebrow">🗺️ Vietnam → Taiwan</p>
         <h2>Đủ xa để nhớ nhau, chưa bao giờ đủ xa để mất nhau</h2>
       </div>
       <div class="map-card reveal">
@@ -153,53 +198,78 @@
           <p><b>Thời gian bay</b><span>vài tiếng</span></p>
           <p><b>Tình bạn</b><span>không có hạn sử dụng</span></p>
         </div>
-        <button class="primary-btn" id="missVietnamBtn" type="button">When you miss Vietnam</button>
+        <button class="primary-btn glow-btn" id="missVietnamBtn" type="button">🇻🇳 When you miss Vietnam</button>
       </div>
     </section>
 
+    <!-- ═══════════ STORY TIMELINE ═══════════ -->
     <section class="section" id="story">
       <div class="section-heading reveal">
-        <p class="eyebrow">Our Story Timeline</p>
+        <p class="eyebrow">📖 Our Story Timeline</p>
         <h2>Mấy chương nhỏ của tụi mình</h2>
       </div>
       <div class="timeline" id="timeline"></div>
     </section>
 
+    <!-- ═══════════ PHOTO & VIDEO GALLERY ═══════════ -->
+    <section class="section gallery-section" id="gallery">
+      <div class="section-heading reveal">
+        <p class="eyebrow">📸 Khoảnh khắc của tụi mình</p>
+        <h2>Mỗi bức ảnh là một lần tụi mình thương nhau thật nhiều</h2>
+      </div>
+
+      <!-- Photo Masonry Gallery -->
+      <div class="photo-gallery" id="photoGallery"></div>
+
+      <!-- Video Reels -->
+      <div class="section-heading reveal" style="margin-top:64px;">
+        <p class="eyebrow">🎬 Video nhỏ của tụi mình</p>
+        <h2>Những khoảnh khắc động, vui hơn ảnh</h2>
+      </div>
+      <div class="video-gallery" id="videoGallery"></div>
+    </section>
+
+    <!-- ═══════════ MEMORY BOX ═══════════ -->
     <section class="section memory-section" id="memory-box">
       <div class="section-heading reveal">
-        <p class="eyebrow">Digital Memory Box</p>
+        <p class="eyebrow">🎁 Digital Memory Box</p>
         <h2>Mở ra khi cần một chút tụi mình</h2>
       </div>
       <div class="memory-grid" id="memoryGrid"></div>
     </section>
 
+    <!-- ═══════════ OPEN WHEN LETTERS ═══════════ -->
     <section class="section" id="letters">
       <div class="section-heading reveal">
-        <p class="eyebrow">Open When Letters</p>
+        <p class="eyebrow">💌 Open When Letters</p>
         <h2>Mỗi phong bì là một cái ôm để dành</h2>
       </div>
       <div class="envelope-grid" id="letterGrid"></div>
     </section>
 
+    <!-- ═══════════ SURVIVAL GUIDE ═══════════ -->
     <section class="section guide-section" id="guide">
       <div class="section-heading reveal">
-        <p class="eyebrow">Taiwan Survival Guide</p>
+        <p class="eyebrow">🧳 Taiwan Survival Guide</p>
         <h2>Sổ tay sống sót phiên bản bạn thân</h2>
       </div>
       <div class="guide-grid" id="guideGrid"></div>
     </section>
 
+    <!-- ═══════════ MESSAGES ═══════════ -->
     <section class="section messages-section" id="messages">
       <div class="section-heading reveal">
-        <p class="eyebrow">Messages From Us</p>
+        <p class="eyebrow">✉️ Messages From Us</p>
         <h2>Postcard tụi mình gửi theo Ngọc</h2>
       </div>
       <div class="postcard-grid" id="messageWall"></div>
     </section>
 
+    <!-- ═══════════ COUNTDOWN ═══════════ -->
     <section class="section countdown-section" id="countdown">
+      <div class="lanterns" id="lanterns" aria-hidden="true"></div>
       <div class="countdown-card reveal">
-        <p class="eyebrow">Countdown</p>
+        <p class="eyebrow">⏳ Countdown</p>
         <h2 id="countdownTitle">Đếm ngày tới chuyến bay</h2>
         <div class="countdown" id="countdownClock">
           <span><b>00</b><small>days</small></span>
@@ -207,34 +277,48 @@
           <span><b>00</b><small>mins</small></span>
           <span><b>00</b><small>secs</small></span>
         </div>
-        <p>Until we meet again: Counting memories, not days.</p>
+        <p class="countdown-quote handwritten">Until we meet again: Counting memories, not days.</p>
       </div>
     </section>
 
+    <!-- ═══════════ FINAL GOODBYE ═══════════ -->
     <section class="section final-section" id="final">
       <div class="stars"></div>
+      <div class="shooting-stars-final" id="shootingStarsFinal"></div>
       <div class="plane plane-final" aria-hidden="true">✈</div>
       <div class="final-content reveal">
-        <p class="line">This is not goodbye.</p>
-        <p class="line">This is just see you later.</p>
-        <p class="line">Từ hôm nay, tụi mình thương nhau từ xa hơn một chút.</p>
+        <p class="line glow-text">This is not goodbye.</p>
+        <p class="line glow-text">This is just see you later.</p>
+        <p class="line glow-text">Từ hôm nay, tụi mình thương nhau từ xa hơn một chút.</p>
         <div class="final-letter">
           <p>Đi đi, <span data-friend-name>Tiểu Ngọc</span>. Đi học, đi lớn lên, đi nhìn thế giới, đi trở thành phiên bản mà Ngọc muốn trở thành.</p>
           <p>Khi Ngọc mệt, nhớ rằng Ngọc không cần đi hết mọi thứ một mình. Khi Ngọc vui, tụi mình muốn được nghe. Khi Ngọc buồn, tụi mình cũng muốn được biết. Khi Ngọc nhớ nhà, hãy mở lại nơi này.</p>
           <p>Tụi mình không giữ Ngọc lại. Tụi mình chỉ gửi theo Ngọc tất cả những điều tốt đẹp nhất.</p>
           <p>Hẹn gặp lại, ở Việt Nam, ở Đài Loan, hoặc ở bất kỳ nơi nào cuộc đời cho tụi mình gặp nhau lần nữa.</p>
-          <p class="handwritten">Not goodbye. Just see you later.</p>
+          <p class="handwritten signature">Not goodbye. Just see you later. 💛</p>
         </div>
-        <button class="primary-btn" data-scroll="#top" type="button">Replay memories</button>
+        <button class="primary-btn glow-btn" data-scroll="#top" type="button">🔄 Replay memories</button>
       </div>
     </section>
   </main>
 
+  <!-- ═══════════ MODAL ═══════════ -->
   <div class="modal" id="modal" aria-hidden="true" role="dialog" aria-modal="true">
     <div class="modal-backdrop" data-close-modal></div>
     <div class="modal-panel" role="document">
       <button class="close-btn" data-close-modal type="button" aria-label="Close modal">×</button>
       <div id="modalContent"></div>
+    </div>
+  </div>
+
+  <!-- ═══════════ LIGHTBOX for gallery ═══════════ -->
+  <div class="lightbox" id="lightbox" aria-hidden="true">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Close">×</button>
+    <button class="lightbox-prev" id="lightboxPrev" aria-label="Previous">‹</button>
+    <button class="lightbox-next" id="lightboxNext" aria-label="Next">›</button>
+    <div class="lightbox-content">
+      <img id="lightboxImg" src="" alt="">
+      <p class="lightbox-caption" id="lightboxCaption"></p>
     </div>
   </div>
 

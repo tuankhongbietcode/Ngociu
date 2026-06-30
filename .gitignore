@@ -1,4 +1,9 @@
-tools/
-tunnel.log
-server.log
-server.err
+# Ignore HEIC/MOV files (browser can't display them)
+*.heic
+*.HEIC
+*.MOV
+*.mov
+
+# OS files
+.DS_Store
+Thumbs.db
