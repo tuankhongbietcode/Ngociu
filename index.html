@@ -14,26 +14,25 @@
 
   <!-- ═══════════ SPLASH SCREEN ═══════════ -->
   <div class="splash" id="splash">
-    <div class="splash-petals" id="splashPetals"></div>
+    <div class="splash-particles" id="splashParticles"></div>
     <div class="splash-content">
       <div class="splash-envelope">
         <div class="splash-flap"></div>
         <div class="splash-letter-pull">
-          <p class="splash-handwritten">Gửi Tiểu Ngọc,</p>
-          <p class="splash-sub">Trước ngày Ngọc đi Đài Loan, tụi mình có một món quà nhỏ...</p>
+          <p class="splash-handwritten">Ê Tiểu Ngọc,</p>
+          <p class="splash-sub">Trước khi xách vali đi Đài Loan, hội bạn có cái này cho xem...</p>
         </div>
       </div>
       <button class="splash-btn" id="splashBtn" type="button">
-        <span class="splash-btn-icon">💌</span>
-        Mở thư ra nha
+        <span class="splash-btn-icon">✈️</span>
+        Khám phá ngay & Bật nhạc
       </button>
     </div>
   </div>
 
   <!-- ═══════════ BACKGROUND EFFECTS ═══════════ -->
   <div class="texture"></div>
-  <div class="falling-petals" id="fallingPetals" aria-hidden="true"></div>
-  <div class="floating-hearts" id="floatingHearts" aria-hidden="true"></div>
+  <div class="floating-emojis" id="floatingEmojis" aria-hidden="true"></div>
 
   <!-- ═══════════ AUDIO (hidden) ═══════════ -->
   <audio id="backgroundMusic" preload="none" loop>
@@ -73,10 +72,10 @@
       </button>
     </div>
     <div class="opening-letter reveal">
-      <p>Gửi <span data-friend-name>Tiểu Ngọc</span>,</p>
-      <p>Tụi mình biết lần này Ngọc đi sẽ lâu. Sẽ không còn kiểu vừa nhớ là hẹn gặp ngay, không còn những buổi rủ nhau đi ăn bất chợt, cũng không còn cảm giác chỉ cần nhắn một câu là có thể ở cạnh nhau liền.</p>
-      <p>Nhưng tụi mình không muốn ngày Ngọc đi chỉ toàn là buồn. Nên tụi mình làm nơi nhỏ này cho Ngọc: để khi nhớ nhà, nhớ những ngày ở Việt Nam, hay nhớ tụi mình, Ngọc có thể mở lại và thấy mình vẫn luôn được thương.</p>
-      <p class="handwritten">Đây không phải là lời tạm biệt. Đây chỉ là cách tụi mình nói rằng: Ngọc cứ đi thật xa, còn tụi mình vẫn ở đây, vẫn nhớ, vẫn đợi nghe Ngọc kể chuyện.</p>
+      <p>Ê <span data-friend-name>Tiểu Ngọc</span>,</p>
+      <p>Thế là cuối cùng cũng đi học thật rồi à. Qua đó bớt bớt cái nết lại, đừng có để người ta cười cho. Tụi mình thì vẫn ở nhà, vẫn tụ tập, chỉ là thiếu đi một cái miệng hay cãi thôi.</p>
+      <p>Làm cái web này tốn chất xám lắm nha. Cứ giữ lấy, lưu lại trên điện thoại. Khi nào qua bển thèm đồ ăn Việt Nam quá, hay thi trượt môn nào đó buồn buồn thì mở ra xem ảnh dìm để thấy đời vẫn còn vui.</p>
+      <p class="handwritten">Đi mạnh giỏi, học hành đàng hoàng, nhớ mua quà về!</p>
     </div>
     <!-- Wave divider -->
     <div class="wave-divider">
@@ -125,7 +124,7 @@
     <section class="section map-section" id="map">
       <div class="section-heading reveal">
         <p class="eyebrow">🗺️ Vietnam → Taiwan</p>
-        <h2>Đủ xa để nhớ nhau, chưa bao giờ đủ xa để mất nhau</h2>
+        <h2>Cách vài ngàn cây số nhưng vẫn chung múi giờ chat chít</h2>
       </div>
       <div class="map-card reveal">
         <svg class="dream-map" viewBox="0 0 980 520" role="img" aria-label="A dreamy friendship journey from Vietnam memories to Taiwan dreams">
@@ -193,12 +192,12 @@
           </text>
         </svg>
         <div class="fact-grid">
-          <p><b>Khoảng cách</b><span>đủ xa để nhớ nhau</span></p>
-          <p><b>Múi giờ</b><span>không đủ xa để biến mất khỏi nhau</span></p>
-          <p><b>Thời gian bay</b><span>vài tiếng</span></p>
-          <p><b>Tình bạn</b><span>không có hạn sử dụng</span></p>
+          <p><b>Khoảng cách</b><span>Vài giờ bay</span></p>
+          <p><b>Múi giờ</b><span>Cách nhau 1 tiếng</span></p>
+          <p><b>Tình bạn</b><span>Online 24/7</span></p>
+          <p><b>Nhớ nhất</b><span>Trà sữa & Đồ ăn mâm</span></p>
         </div>
-        <button class="primary-btn glow-btn" id="missVietnamBtn" type="button">🇻🇳 When you miss Vietnam</button>
+        <button class="primary-btn glow-btn" id="missVietnamBtn" type="button">🇻🇳 Thèm đồ ăn Việt thì bấm đây</button>
       </div>
     </section>
 
@@ -214,8 +213,8 @@
     <!-- ═══════════ PHOTO & VIDEO GALLERY ═══════════ -->
     <section class="section gallery-section" id="gallery">
       <div class="section-heading reveal">
-        <p class="eyebrow">📸 Khoảnh khắc của tụi mình</p>
-        <h2>Mỗi bức ảnh là một lần tụi mình thương nhau thật nhiều</h2>
+        <p class="eyebrow">📸 Bóc phốt hội bạn</p>
+        <h2>Có những tấm hình thà xóa chứ đừng up lên mạng</h2>
       </div>
 
       <!-- Photo Masonry Gallery -->
@@ -287,17 +286,17 @@
       <div class="shooting-stars-final" id="shootingStarsFinal"></div>
       <div class="plane plane-final" aria-hidden="true">✈</div>
       <div class="final-content reveal">
-        <p class="line glow-text">This is not goodbye.</p>
-        <p class="line glow-text">This is just see you later.</p>
-        <p class="line glow-text">Từ hôm nay, tụi mình thương nhau từ xa hơn một chút.</p>
+        <p class="line glow-text">Cất cánh bình an nhé!</p>
+        <p class="line glow-text">Bọn này ở nhà đợi quà.</p>
+        <p class="line glow-text">Tình bạn chính thức chuyển sang chế độ Online.</p>
         <div class="final-letter">
-          <p>Đi đi, <span data-friend-name>Tiểu Ngọc</span>. Đi học, đi lớn lên, đi nhìn thế giới, đi trở thành phiên bản mà Ngọc muốn trở thành.</p>
-          <p>Khi Ngọc mệt, nhớ rằng Ngọc không cần đi hết mọi thứ một mình. Khi Ngọc vui, tụi mình muốn được nghe. Khi Ngọc buồn, tụi mình cũng muốn được biết. Khi Ngọc nhớ nhà, hãy mở lại nơi này.</p>
-          <p>Tụi mình không giữ Ngọc lại. Tụi mình chỉ gửi theo Ngọc tất cả những điều tốt đẹp nhất.</p>
-          <p>Hẹn gặp lại, ở Việt Nam, ở Đài Loan, hoặc ở bất kỳ nơi nào cuộc đời cho tụi mình gặp nhau lần nữa.</p>
-          <p class="handwritten signature">Not goodbye. Just see you later. 💛</p>
+          <p>Đi đi, <span data-friend-name>Tiểu Ngọc</span>. Đi học, đi trải nghiệm, đi xem thế giới bên ngoài nó tròn méo ra sao.</p>
+          <p>Lúc nào buồn quá, cô đơn quá thì cứ video call về đây, bọn này rảnh thì nghe, không rảnh thì cúp máy. Đùa thôi, lúc nào cũng sẵn sàng nghe lảm nhảm.</p>
+          <p>Nhớ giữ gìn sức khỏe, ăn uống đầy đủ, đừng có để ốm vặt.</p>
+          <p>Hẹn ngày tái nạm ở Việt Nam (hoặc Đài Loan nếu bọn này trúng số).</p>
+          <p class="handwritten signature">Hội bạn thân vô tri ✌️</p>
         </div>
-        <button class="primary-btn glow-btn" data-scroll="#top" type="button">🔄 Replay memories</button>
+        <button class="primary-btn glow-btn" data-scroll="#top" type="button">🔄 Lên đầu trang nào</button>
       </div>
     </section>
   </main>

@@ -38,19 +38,19 @@ const siteData = {
     ["Khi nhớ tụi mình", "Nhắn đi. Gọi đi. Gửi một cái ảnh xấu cũng được. Tụi mình luôn có chỗ trống cho Ngọc trong ngày của tụi mình."],
   ],
   messages: [
-    { from: "Từ một đứa hay mít ướt", message: "Mình sẽ nhớ Ngọc nhiều, nhưng mình vui vì Ngọc đang đi tới một nơi có thể làm Ngọc lớn lên. Đi mạnh giỏi nha, nhưng đừng quên có tụi mình ở sau lưng." },
-    { from: "Từ đứa chuyên chọc quê", message: "Qua đó nhớ ăn uống đàng hoàng. Đừng để tụi mình phải gọi video chỉ để kiểm tra tủ lạnh. Nhớ Ngọc nhưng mình nói ít thôi, giữ giá." },
-    { from: "Từ tụi mình", message: "Có những tình bạn không cần gặp mỗi ngày mới là thân. Chỉ cần biết khi quay lại, mình vẫn có thể nói chuyện như chưa từng rời đi." },
+    { from: "Từ một đứa hay lèm bèm", message: "Qua đó nhớ học hành tử tế, đừng có mải chơi quên đường về nha. Rảnh thì gọi điện về tấu hài cho tao nghe." },
+    { from: "Từ đứa chuyên ăn ké", message: "Đi mang theo luôn cái nết ăn uống đi nha. Có đồ ăn ngon bên đó nhớ chụp hình gửi về cho bọn này thèm." },
+    { from: "Từ hội mỏ hỗn", message: "Đừng có tưởng đi xa là thoát được bọn này nha. Cứ liệu hồn đấy! Chúc lên đường bình an, học bá nhé!" },
   ],
   hugMessages: [
-    "Tụi mình cũng nhớ Ngọc.",
-    "Đi ăn chưa?",
-    "Đừng buồn một mình.",
-    "Mở camera call đi.",
-    "Ngọc xa thôi, không mất.",
-    "Nhớ Ngọc nhưng không nói nhiều đâu, ngại.",
-    "Thương Ngọc lắm 💛",
-    "Chờ Ngọc về nè.",
+    "Nhớ mua quà về nha!",
+    "Bên này vẫn đang nhậu thiếu Ngọc nha.",
+    "Hôm nào rảnh thì video call tấu hài tiếp.",
+    "Đi vui vẻ, bớt quậy lại.",
+    "Bên này vẫn bình thường, thiếu mỗi m thôi.",
+    "Cẩn thận bên đó bị lừa tình nha =))",
+    "Thèm trà sữa chưa?",
+    "Nhớ ăn uống đầy đủ, ốm không ai lo đâu.",
   ],
   // Real photos from the user
   photos: [
@@ -134,13 +134,24 @@ function setupSplash() {
     petalsContainer.appendChild(petal);
   }
 
-  btn.addEventListener("click", () => {
+  btn.addEventListener("click", async () => {
     splash.classList.add("hidden");
     setTimeout(() => {
       splash.style.display = "none";
       document.body.style.overflow = "";
       startBackgroundEffects();
     }, 800);
+    
+    // Attempt to start music right away on user gesture
+    try {
+      const audio = $("#backgroundMusic");
+      await audio.play();
+      startMusicUi();
+    } catch {
+      // Fallback to synth if mp3 is missing
+      startSynthMusic();
+      startMusicUi();
+    }
   });
 
   document.body.style.overflow = "hidden";
@@ -148,42 +159,23 @@ function setupSplash() {
 
 // ═══════════ BACKGROUND EFFECTS ═══════════
 function startBackgroundEffects() {
-  startFallingPetals();
-  startFloatingHearts();
+  startFloatingEmojis();
   startShootingStars($("#shootingStars"));
   startShootingStars($("#shootingStarsFinal"));
   startLanterns();
 }
 
-function startFallingPetals() {
-  const container = $("#fallingPetals");
-  const colors = ["#ffb4a2", "#ff6b9d", "#e0aaff", "#F4A7A3", "#ffd166"];
-
-  petalTimer = setInterval(() => {
-    const petal = document.createElement("div");
-    petal.className = "petal";
-    petal.style.left = `${Math.random() * 100}%`;
-    petal.style.width = `${8 + Math.random() * 14}px`;
-    petal.style.height = `${8 + Math.random() * 14}px`;
-    petal.style.background = colors[Math.floor(Math.random() * colors.length)];
-    petal.style.animationDuration = `${6 + Math.random() * 8}s`;
-    container.appendChild(petal);
-    petal.addEventListener("animationend", () => petal.remove(), { once: true });
-  }, 1200);
-}
-
-function startFloatingHearts() {
-  const container = $("#floatingHearts");
-  const hearts = ["♡", "♥", "❤", "💕", "💗", "💛"];
+function startFloatingEmojis() {
+  const container = $("#floatingEmojis");
+  const emojis = ["✈️", "😎", "✌️", "🎒", "✨", "🚀"];
 
   heartTimer = setInterval(() => {
     const heart = document.createElement("span");
     heart.className = "heart-float";
-    heart.textContent = hearts[Math.floor(Math.random() * hearts.length)];
+    heart.textContent = emojis[Math.floor(Math.random() * emojis.length)];
     heart.style.left = `${Math.random() * 100}%`;
-    heart.style.fontSize = `${14 + Math.random() * 18}px`;
+    heart.style.fontSize = `${20 + Math.random() * 14}px`;
     heart.style.animationDuration = `${5 + Math.random() * 6}s`;
-    heart.style.color = ["#C1121F", "#ff6b9d", "#F4A7A3", "#e0aaff", "#ffd166"][Math.floor(Math.random() * 5)];
     container.appendChild(heart);
     heart.addEventListener("animationend", () => heart.remove(), { once: true });
   }, 2000);
@@ -349,9 +341,9 @@ function memoryHtml(title) {
     "Inside Jokes": `<h2>😜 Inside Jokes</h2><ul><li>Câu nói chỉ tụi mình hiểu số 1.</li><li>Meme nội bộ không giải thích được.</li><li>Cái biệt danh mà Ngọc cấm nhưng tụi mình vẫn nhớ.</li></ul>`,
     "Things We Will Miss": `<h2>💔 Things We Will Miss</h2><p>Tụi mình sẽ nhớ cách Ngọc xuất hiện trong những ngày rất bình thường, nhớ tiếng cười, nhớ mấy câu than thở, nhớ cả việc có một người để rủ đi ăn mà không cần giải thích quá nhiều.</p>`,
     "Tiny Promises": `<h2>🤞 Tiny Promises</h2><ul><li>Tụi mình sẽ nhắn Ngọc khi thấy món gì làm tụi mình nhớ Ngọc.</li><li>Ngọc vui hay buồn cũng được kể.</li><li>Gặp lại sẽ đi ăn một bữa thật dài.</li></ul>`,
-    "Secret Letter": `<h2>🔐 Secret Letter</h2><p>Nhập password/nickname để mở thư bí mật.</p><form class="secret-form" id="secretForm"><input id="secretInput" placeholder="Password"><button class="primary-btn" type="submit">Open</button></form><p id="secretResult"></p>`,
-    "Emergency Hug Button": `<h2>🤗 Emergency Hug Button</h2><p id="hugText" style="font-size:1.5rem;font-family:Caveat,cursive;color:var(--red)">${randomHug()}</p><button class="primary-btn" id="newHugBtn" type="button">💛 Gửi thêm một cái ôm</button>`,
-    "Do not click": `<h2>⚠️ Đã bảo đừng click rồi mà</h2><p>Đây là chỗ dành cho ảnh dìm huyền thoại.</p><div class="modal-gallery">${siteData.photos.slice(-6).map(([src, caption]) => `<figure style="margin:0"><img src="${src}" alt="${caption}" loading="lazy" style="width:100%;height:160px;object-fit:cover;border-radius:6px"><figcaption style="font-size:.8rem;color:var(--muted)">${caption}</figcaption></figure>`).join("")}</div>`,
+    "Secret Letter": `<h2>🔐 Thư tuyệt mật</h2><p>Nhập mật khẩu hội kín vào đây để mở khóa.</p><form class="secret-form" id="secretForm"><input id="secretInput" placeholder="Password"><button class="primary-btn" type="submit">Mở khóa</button></form><p id="secretResult"></p>`,
+    "Emergency Hug Button": `<h2>🤗 Nút cầu cứu</h2><p id="hugText" style="font-size:1.5rem;font-family:Caveat,cursive;color:var(--teal)">${randomHug()}</p><button class="primary-btn" id="newHugBtn" type="button">😎 Nghe thêm câu nữa</button>`,
+    "Do not click": `<h2>⚠️ Đã bảo đừng click rồi mà</h2><p>Đây là chỗ dành cho ảnh dìm huyền thoại. Chạy đi trước khi quá muộn!</p><div class="modal-gallery">${siteData.photos.slice(-6).map(([src, caption]) => `<figure style="margin:0"><img src="${src}" alt="${caption}" loading="lazy" style="width:100%;height:160px;object-fit:cover;border-radius:6px"><figcaption style="font-size:.8rem;color:var(--muted)">${caption}</figcaption></figure>`).join("")}</div>`,
   };
   return templates[title] || `<h2>${title}</h2><p>Đang chờ thêm kỷ niệm.</p>`;
 }
@@ -359,12 +351,12 @@ function memoryHtml(title) {
 // ═══════════ RENDER MEMORY BOX ═══════════
 function renderMemoryBox() {
   const items = ["Polaroid Photos", "Dumb Screenshots", "Voice Notes", "Inside Jokes", "Things We Will Miss", "Tiny Promises", "Secret Letter", "Emergency Hug Button", "Do not click"];
-  const icons = ["📸", "😂", "🎤", "😜", "💔", "🤞", "🔐", "🤗", "⚠️"];
+  const icons = ["📸", "😂", "🎤", "😜", "💔", "🤞", "🔐", "🆘", "⚠️"];
   $("#memoryGrid").innerHTML = items.map((title, index) => `
     <button class="memory-card reveal" type="button" data-open-memory="${title}">
       <span class="icon">${icons[index]}</span>
       <h3>${title}</h3>
-      <p>${title === "Do not click" ? "Seriously. Đừng bấm." : "Mở hộp này ra khi cần."}</p>
+      <p>${title === "Do not click" ? "Nói thật đấy, đừng bấm." : "Mở ra xem có gì hot."}</p>
     </button>
   `).join("");
 }
@@ -417,8 +409,8 @@ function setupInteractions() {
           e.preventDefault();
           const ok = $("#secretInput").value.trim().toLowerCase() === siteData.secretPassword.toLowerCase();
           $("#secretResult").innerHTML = ok
-            ? `<span class="handwritten">Tụi mình thương Ngọc nhiều hơn tụi mình nói ra. Đi xa nhớ giữ mình, nhớ gọi về, nhớ rằng Ngọc luôn có một chỗ rất riêng trong lòng tụi mình. 💛</span>`
-            : "Sai rồi, thử nickname/password khác nha.";
+            ? `<span class="handwritten">Thực ra bọn này cũng hơi quý mày một tí. Qua bển bớt tấu hài lại, học cho giỏi rồi về dẫn bọn này đi ăn nha! 😎</span>`
+            : "Sai pass rồi má ơi, nhập lại đi.";
         });
       }
       $("#newHugBtn")?.addEventListener("click", () => {
@@ -551,32 +543,33 @@ function startSynthMusic() {
   const play = () => {
     if (!synthAudio) return;
     const now = synthAudio.currentTime;
+    // Uptempo, cheerful synth pattern
     const freq = notes[step % notes.length];
     const osc = synthAudio.createOscillator();
     const gain = synthAudio.createGain();
     const filter = synthAudio.createBiquadFilter();
 
-    osc.type = step % 4 === 0 ? "triangle" : "sine";
+    osc.type = step % 2 === 0 ? "square" : "sine";
     osc.frequency.setValueAtTime(freq, now);
     filter.type = "lowpass";
-    filter.frequency.setValueAtTime(1100, now);
+    filter.frequency.setValueAtTime(1400, now);
     gain.gain.setValueAtTime(0.0001, now);
-    gain.gain.exponentialRampToValueAtTime(0.32, now + 0.04);
-    gain.gain.exponentialRampToValueAtTime(0.0001, now + 0.72);
+    gain.gain.exponentialRampToValueAtTime(0.4, now + 0.02);
+    gain.gain.exponentialRampToValueAtTime(0.0001, now + 0.5);
 
     osc.connect(filter);
     filter.connect(gain);
     gain.connect(master);
     gain.connect(delay);
     osc.start(now);
-    osc.stop(now + 0.78);
+    osc.stop(now + 0.55);
 
-    if (step % 4 === 0) playBass(freq / 2, master);
+    if (step % 2 === 0) playBass(freq / 2, master);
     step += 1;
   };
 
   play();
-  synthTimer = setInterval(play, 430);
+  synthTimer = setInterval(play, 280);
 }
 
 function playBass(freq, destination) {
@@ -584,15 +577,15 @@ function playBass(freq, destination) {
   const now = synthAudio.currentTime;
   const osc = synthAudio.createOscillator();
   const gain = synthAudio.createGain();
-  osc.type = "sine";
+  osc.type = "sawtooth";
   osc.frequency.setValueAtTime(freq, now);
   gain.gain.setValueAtTime(0.0001, now);
-  gain.gain.exponentialRampToValueAtTime(0.22, now + 0.06);
-  gain.gain.exponentialRampToValueAtTime(0.0001, now + 1.05);
+  gain.gain.exponentialRampToValueAtTime(0.2, now + 0.05);
+  gain.gain.exponentialRampToValueAtTime(0.0001, now + 0.4);
   osc.connect(gain);
   gain.connect(destination);
   osc.start(now);
-  osc.stop(now + 1.1);
+  osc.stop(now + 0.45);
 }
 
 function stopSynthMusic() {
@@ -606,19 +599,19 @@ function stopSynthMusic() {
 
 function startFloatingLove() {
   if (loveTimer) return;
-  const symbols = ["♡", "♪", "✦", "love", "miss", "soon", "💛", "🌸"];
+  const symbols = ["✈️", "🚀", "🌟", "😎", "✌️", "🎒"];
   loveTimer = setInterval(() => {
     const item = document.createElement("span");
     item.className = "floating-love";
     item.textContent = symbols[Math.floor(Math.random() * symbols.length)];
     item.style.setProperty("--love-x", `${Math.random() * 96}vw`);
     item.style.setProperty("--love-drift", `${Math.random() * 120 - 60}px`);
-    item.style.setProperty("--love-size", `${18 + Math.random() * 18}px`);
-    item.style.setProperty("--love-speed", `${5 + Math.random() * 4}s`);
-    item.style.setProperty("--love-color", ["#C1121F", "#FFD166", "#0EA5A3", "#8B7CF6", "#F4A7A3", "#ff6b9d"][Math.floor(Math.random() * 6)]);
+    item.style.setProperty("--love-size", `${22 + Math.random() * 18}px`);
+    item.style.setProperty("--love-speed", `${4 + Math.random() * 4}s`);
+    item.style.setProperty("--love-color", ["#0EA5A3", "#FFD166", "#8B7CF6", "#f28482"][Math.floor(Math.random() * 4)]);
     document.body.appendChild(item);
     item.addEventListener("animationend", () => item.remove(), { once: true });
-  }, 520);
+  }, 400);
 }
 
 function stopFloatingLove() {
@@ -667,7 +660,7 @@ function setupEasterEgg() {
     el.addEventListener("click", () => {
       taiwanClicks += 1;
       if (taiwanClicks === 7) {
-        openModal("<h2>🎉 Bí mật</h2><p>Ngọc tìm được bí mật rồi. Điều bí mật là: tụi mình nhớ Ngọc hơn tụi mình nói ra. 💛</p>");
+        openModal("<h2>🎉 Mật mã</h2><p>Phát hiện ra chỗ giấu mật mã rồi à? Tặng cho câu này: Đi mạnh giỏi, đừng quên tụi này. 😎</p>");
         taiwanClicks = 0;
       }
     });
